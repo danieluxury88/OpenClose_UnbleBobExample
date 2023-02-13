@@ -1,16 +1,15 @@
 package expenseReport;
 
-import org.junit.Before;
-import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 
 public class ExpenseReportTest {
   private ExpenseReport report;
   private ExpenseReporter reporter;
   private MockReportPrinter printer;
 
-  @Before
+  @BeforeEach
   public void setUp() {
     report = new ExpenseReport();
     reporter = new ExpenseReporter(report);
